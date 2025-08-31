@@ -1,61 +1,74 @@
-🧠 Cognitive Echo - Neuroadaptive EdTech Prototype
+🧠 Cognitive Echo: A Neuroadaptive Learning Prototype
 Submission for the NALLAS Hackathon
 
-Cognitive Echo is an open-source prototype that explores the future of education by creating a learning experience that adapts to the user's cognitive state in real-time. It moves beyond static content by simulating a Brain-Computer Interface (BCI) to detect a learner's focus and triggers context-aware, generative AI interventions to make learning more personal, engaging, and effective.
+Cognitive Echo is a functional, open-source prototype that explores the future of personalized education. It tackles the challenge of static learning by creating a dynamic experience that adapts to a user's cognitive state in real-time. This prototype simulates a Brain-Computer Interface (BCI) to understand when a learner is focused, distracted, or drowsy, and uses that data to trigger a simple yet effective visual intervention to enhance memory.
 
-✨ Core Features
-This prototype directly addresses the hackathon's suggested focus areas by integrating a multi-layered neuroadaptive system.
+✨ Key Innovations & Features
+This prototype demonstrates a complete, end-to-end neuroadaptive feedback loop, fulfilling the core requirements of the hackathon challenge.
 
 1. Neuro-Sensing & State Detection (Simulation)
-The application includes a one-click simulation of EEG streams that requires no hardware. The system automatically cycles through three distinct cognitive states, with the UI dynamically adapting to each one.
+The application includes a one-click simulation of EEG streams that requires no hardware or setup. The system automatically cycles through three distinct cognitive states every 3 seconds, with the UI dynamically adapting to each one.
 
-🔵 ATTENTION: The user is focused on the learning material. The system prepares to tag the content for memory reinforcement.
+🔵 ATTENTION: The user is focused on the learning material. The system "tags" this moment for memory reinforcement.
 
-🟠 DISTRACTED: The user's focus has lapsed. The system initiates a re-engagement protocol.
+🟠 DISTRACTED: The user's focus has lapsed.
 
 🟣 DROWSY: The user is transitioning towards sleep, a key moment for memory consolidation.
 
-2. Adaptive Intervention & Content Generation
-Cognitive Echo uses a variety of interventions tailored to the detected cognitive state.
+2. Adaptive Intervention
+When the DROWSY state is detected, the app triggers a subconscious micro-intervention.
 
-🤖 Gen AI Mood-to-Mnemonic Generator (ATTENTION state):
-When the user is attentive, they can click a button to call the Gemini API. The application sends the vocabulary word and a simulated "mood" (e.g., calm or playful) to the model, which generates a unique, personalized mnemonic in real-time. This showcases an AI-driven pipeline for creating custom learning artifacts.
+Visual Cue: Instead of complex libraries, the main card begins to pulse with a gentle glow using pure CSS animations.
 
-🎮 Brain-Triggered Micro-Game (DISTRACTED state):
-To combat distraction, the lesson is paused and a 10-second interactive "catch the orb" game is launched. This converts a moment of boredom into a play-driven re-engagement loop, bringing the user's focus back to the screen.
+Non-Intrusive Design: This subtle visual cue is designed to reinforce the memory of the word tagged during the ATTENTION state without disrupting the user, fulfilling the "subconscious coaching" goal of the hackathon.
 
-🔮 AR/3D Subconscious Cue (DROWSY state):
-To enhance long-term retention, the app triggers a subconscious micro-intervention. A dream-like 3D visual, rendered with Three.js, gently appears and rotates on screen, accompanied by a subtle audio chime from Tone.js. This is designed to reinforce the tagged memory without disrupting the user's descent into sleep.
+🚀 Live Demo
+See Cognitive Echo in action as it cycles through its adaptive states. Notice how the UI colors and visual effects change based on the simulated brainwave data.
 
-3. Ethical & Comfortable UX
-The prototype is built with user privacy and comfort as a priority.
+(This is a placeholder for a GIF. You can create one using a tool like GIPHY Capture or ScreenToGif and drag it into this README on GitHub)
+[GIF of the app cycling through ATTENTION (blue), DISTRACTED (orange), and DROWSY (pulsing purple)]
 
-Local-Only Data: All simulated brainwave data is generated and processed entirely in the browser and is never sent to a server.
+🛠️ Technology Stack & Tools
+This prototype was built with a focus on stability and accessibility, using a clean, browser-native stack with no external libraries.
 
-Minimal-Intrusion Design: The UI is clean and the interventions (especially the subconscious cue) are designed to be gentle and non-disruptive.
+Category
 
-Consent Model: While the prototype runs automatically, a production version would require explicit user consent before any monitoring begins.
+Technology
 
-🚀 How to Run the Prototype
-This project is built as a single, self-contained file for maximum portability and ease of use.
+Purpose
 
-Prerequisites
-A modern web browser (e.g., Google Chrome, Firefox, Microsoft Edge).
+Core Frontend
 
-Build & Deploy Instructions
-No Build Step Needed: The entire application is self-contained within the index.html file.
+HTML5, CSS3, JavaScript
 
-Run Locally: Simply open the index.html file directly in your web browser. For the best experience (especially for loading the 3D models and audio), it is recommended to use a simple local server. The easiest way is with the "Live Server" extension in VS Code.
+Building the responsive UI and core application logic.
 
-📊 Project Flow Diagram
-This diagram illustrates the data flow from the simulated BCI to the user interface.
+Simulation
 
-BCI Signal (Simulator) → State Classification → Adaptive Intervention Logic → Deliverable UI
+Custom JavaScript
 
-BCI Signal: The startEEGStream function simulates a new cognitive state every 3 seconds.
+A one-click simulation of EEG streams as required.
 
-Classification: The updateUI function receives the state and identifies it.
+Intervention
 
-Intervention Logic: Based on the state, the system decides which intervention to trigger (Mnemonic Button, Game, or 3D Cue).
+CSS Animations
 
-UI Update: The application's UI dynamically
+Providing the non-intrusive, visual "pulsing glow" effect.
+
+✅ Hackathon Submission Checklist
+This project fulfills all the requirements outlined in the "What to Submit" section.
+
+[✅] Code Repository: You are viewing it. It contains a clear README and all source code in a single, easy-to-run file.
+
+[✅] Interactive Prototype: The index.html file is a live, interactive demo.
+
+[✅] Flow Diagram: The logic flows from the BCI Simulator → State Classification → Intervention Logic → Deliverable UI (CSS Animation).
+
+[✅] Ethics & Safety Brief: All data is 100% local-only. The prototype is designed for user comfort with minimal-intrusion interventions, and a full version would include an explicit consent flow.
+
+⚙️ How to Run
+This project is designed for maximum simplicity.
+
+No Build Required: The entire application is self-contained in index.html.
+
+Run: Simply open the index.html file in a modern web browser (like Chrome, Firefox, or Edge).
