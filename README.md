@@ -32,4 +32,3 @@ When the **DROWSY** state is detected, the app triggers a subconscious **micro-i
 See **Cognitive Echo** in action as it cycles through its adaptive states.  
 UI colors and visual effects change based on simulated brainwave data.  
 
-📌 *(Placeholder for GIF — create with GIPHY Capture or ScreenToGif and drag into this README on GitHub)*  
